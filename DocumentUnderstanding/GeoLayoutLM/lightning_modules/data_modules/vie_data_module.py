@@ -60,6 +60,8 @@ class VIEDataModule(pl.LightningDataModule):
             self.cfg.img_w,
             mode="train",
         )
+        print(self.cfg.dataset_root_path) #added by me
+        print(dataset) #added by me
         data_loader = DataLoader(
             dataset,
             batch_size=self.cfg.train.batch_size,
