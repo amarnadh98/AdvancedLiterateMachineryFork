@@ -33,6 +33,7 @@ class VIEDataModule(pl.LightningDataModule):
     @overrides
     def setup(self, stage=None):
         self.train_loader = self._get_train_loader()
+        print(self.train_loader)    #new line added by me
         self.val_loader = self._get_val_test_loaders(mode="val")
 
     @overrides
